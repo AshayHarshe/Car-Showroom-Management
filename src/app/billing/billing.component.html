@@ -1,0 +1,293 @@
+
+
+
+ <!-- <div class="container mb-3" style="margin-top: 5%;">
+    <div class="cardS">
+      <div class="card card1">
+        <div class="card-body">BILLING SECTION &nbsp;
+          <button type="button" class="btn btn11 btn-primary" (click)="openBillModal(Billtemplate,'null')">Add More</button>
+      </div>
+    </div>
+  </div>
+   -->
+  
+  
+    <!-- *************** Table No. 4 **************** -->
+  
+<!--   
+    <div class="table1">
+      <table class="table table-striped text-center ">
+        <thead>
+          <tr>
+            <th scope="col">Sr.No</th>
+            <th scope="col">Customer Name</th>
+            <th scope="col">Mobile No.</th>
+            <th scope="col">Product</th>
+            <th scope="col">Total Amount</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <tr *ngFor="let Bill of BillOfCar; let i = index">
+            <th scope="row">{{i + 1}}</th>
+            <td>{{Bill.name}}</td>
+            <td>{{Bill.mobile}}</td>
+            <td>{{Bill.product}}</td>
+            <td>{{Bill.amount}}</td>
+            <td>
+              <button type="button" class="btn btn8 btn-warning"  (click)="openBillModal(EditBilltemplate,i)">Edit</button> &nbsp;&nbsp;
+              <button type="button" class="btn btn7 btn-warning"  (click)="DeleteBill(i)">Delete</button> 
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+   
+  </div> -->
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!-- **************************************************
+  ************* B I L L Template Start  *****************
+  *************************************************** -->
+  
+  
+  
+  
+  
+  
+  
+  <!-- <ng-template #Billtemplate>
+    <div class="modal-header  AddCarHead RTemp">
+      <h4 class="modal-title pull-left ">PRODUCT BILLING</h4>
+      <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="Billclose()">
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body RTemp">
+      
+      <div class="mb-3 mt-2">
+        <label for="text" class="form-label" ><i class='fas fa-user-alt' style='font-size:15px'></i> &nbsp; Customer Name :-</label>
+        <input type="text" class="form-control" placeholder="Enter your name"   [(ngModel)]="BillName">
+      </div>
+  
+  
+      <div class="mb-3 mt-3">
+        <label for="text" class="form-label" ><i class="fa fa-phone" style="font-size:15px"></i> &nbsp; Mobile No. :-</label>
+        <input type="number" class="form-control" placeholder="Enter number" [(ngModel)]="BillMobile">
+      </div>
+  
+  
+      <div class="mb-3 mt-3">
+        <label for="text" class="form-label  mb-1"><i class='fas fa-car-side' style='font-size:15px'></i> &nbsp; Product Name :-</label>
+         <select class="form-select" id="sel" name="sellist"   [(ngModel)]="BillProduct">
+          <option value="" disabled selected>Select Part</option>
+          <option value="Tyre">Tyre</option>
+          <option value="Battery">Battery</option>
+          <option value="Radiator">Radiator</option>
+          <option value="Breakes">Breakes</option>      
+          <option value="Head Light">Head Light</option>
+          <option value="Susspension">Susspension</option>
+          <option value="Wind Screen">Wind Screen</option>
+        </select>
+      </div>
+    
+      
+      <div class="mb-3 mt-3">
+        <label for="text" class="form-label" ><i class="fas fa-rupee-sign" style="font-size:15px"></i> &nbsp; Total Amount :-</label>
+        <input type="number" class="form-control" placeholder="Enter amount"   [(ngModel)]="BillAmount">
+      </div>
+  
+      <button type="button" class="btn btn4 btn-outline-danger"   (click)="resetBill()">Reset</button> &nbsp;
+      <button type="button" class="btn btn3 btn-outline-success"  [disabled]="BillName == '' "    (click)="submitBill()">Add</button>
+      
+  
+    </div>
+  </ng-template>
+   -->
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!-- **************************************************
+  ************* Edit Bill Template Start  *****************
+  *************************************************** -->
+  
+  
+  
+  
+  
+  
+  
+  <!-- <ng-template #EditBilltemplate>
+    <div class="modal-header  AddCarHead RTemp">
+      <h4 class="modal-title pull-left ">PRODUCT BILLING</h4>
+      <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="Billclose()">
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body RTemp">
+      
+      <div class="mb-3 mt-2">
+        <label for="text" class="form-label" ><i class='fas fa-user-alt' style='font-size:15px'></i> &nbsp; Customer Name :-</label>
+        <input type="text" class="form-control" placeholder="Enter your name"   [(ngModel)]="BillName">
+      </div>
+  
+  
+      <div class="mb-3 mt-3">
+        <label for="text" class="form-label" ><i class="fa fa-phone" style="font-size:15px"></i> &nbsp; Mobile No. :-</label>
+        <input type="number" class="form-control" placeholder="Enter number" [(ngModel)]="BillMobile">
+      </div>
+  
+  
+      <div class="mb-3 mt-3">
+        <label for="text" class="form-label  mb-1"><i class='fas fa-car-side' style='font-size:15px'></i> &nbsp; Product Name :-</label>
+         <select class="form-select" id="sel" name="sellist"   [(ngModel)]="BillProduct">
+          <option value="" disabled selected>Select Part</option>
+          <option value="Tyre">Tyre</option>
+          <option value="Battery">Battery</option>
+          <option value="Radiator">Radiator</option>
+          <option value="Breakes">Breakes</option>      
+          <option value="Head Light">Head Light</option>
+          <option value="Susspension">Susspension</option>
+          <option value="Wind Screen">Wind Screen</option>
+        </select>
+      </div>
+    
+      
+      <div class="mb-3 mt-3">
+        <label for="text" class="form-label" ><i class="fas fa-rupee-sign" style="font-size:15px"></i> &nbsp; Total Amount :-</label>
+        <input type="number" class="form-control" placeholder="Enter amount"   [(ngModel)]="BillAmount">
+      </div>
+  
+      <button type="button" class="btn btn4 btn-outline-danger"   (click)="resetBill()">Reset</button> &nbsp;
+      <button type="button" class="btn btn3 btn-outline-success"  [disabled]="BillName == '' "    (click)="editBill()">Add</button>
+      
+  
+    </div>
+  </ng-template> -->
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  <!-- new code reactive form -->
+
+
+ 
+
+
+  <div class="container">
+
+    <div class="cardS">
+      <div class="card card1">
+        <div class="card-body">BILLING SECTION &nbsp;
+          <!-- <button type="button" class="btn btn11 btn-primary" (click)="openBillModal(Billtemplate,'null')">Add More</button> -->
+      </div>
+    </div>
+  </div>
+
+    <form [formGroup]="billform">
+    <div class="row" style="margin-top: 5%;">
+      <div class="col-lg-4">
+        <div class="modal-body RTemp">
+          
+          <div class="mb-3 mt-2">
+            <label for="text" class="form-label" ><i class='fas fa-user-alt' style='font-size:15px'></i> &nbsp; Customer Name :-</label>
+            <input type="text" class="form-control" placeholder="Enter your name"   formControlName="name">
+          </div>
+      
+      
+          <div class="mb-3 mt-3">
+            <label for="text" class="form-label" ><i class="fa fa-phone" style="font-size:15px"></i> &nbsp; Mobile No. :-</label>
+            <input type="number" class="form-control" placeholder="Enter number" formControlName="mobile">
+          </div>
+      
+      
+          <div class="mb-3 mt-3">
+            <label for="text" class="form-label  mb-1"><i class='fas fa-car-side' style='font-size:15px'></i> &nbsp; Product Name :-</label>
+             <select class="form-select" id="sel" name="sellist"   formControlName="product">
+              <option value="" disabled selected>Select Part</option>
+              <option value="Tyre">Tyre</option>
+              <option value="Battery">Battery</option>
+              <option value="Radiator">Radiator</option>
+              <option value="Breakes">Breakes</option>      
+              <option value="Head Light">Head Light</option>
+              <option value="Susspension">Susspension</option>
+              <option value="Wind Screen">Wind Screen</option>
+            </select>
+          </div>
+        
+          
+          <div class="mb-3 mt-3">
+            <label for="text" class="form-label" ><i class="fas fa-rupee-sign" style="font-size:15px"></i> &nbsp; Total Amount :-</label>
+            <input type="number" class="form-control" placeholder="Enter amount"   formControlName="amount">
+          </div>
+      
+          <button type="button" class="btn btn4 btn-outline-danger"   (click)="resetBill()">Reset</button> &nbsp;
+          <button type="button" class="btn btn3 btn-outline-success" *ngIf="isEditClicked==false" (click)="submitBill()">Add</button>
+          <button type="button" class="btn btn3 btn-outline-success" *ngIf="isEditClicked==true" (click)="update()">Update</button>
+          
+      
+        </div>
+      </div>
+
+      <div class="col-lg-8">
+        <div class="table1">
+          <table class="table table-striped text-center ">
+            <thead>
+              <tr>
+                <th scope="col">Sr.No</th>
+                <th scope="col">Customer Name</th>
+                <th scope="col">Mobile No.</th>
+                <th scope="col">Product</th>
+                <th scope="col">Total Amount</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            
+            <tbody>
+              <tr *ngFor="let Bill of BillOfCar; let i = index">
+                <th scope="row">{{i + 1}}</th>
+                <td>{{Bill.name | titlecase}}</td>
+                <td>{{Bill.mobile}}</td>
+                <td>{{Bill.product}}</td>
+                <td>{{Bill.amount}}</td>
+                <td>
+                  <!-- <button type="button" class="btn btn8 btn-warning"  (click)="openBillModal(EditBilltemplate,i)">Edit</button> &nbsp;&nbsp; -->
+                  <button type="button" class="btn btn8 btn-warning"  (click)="editBill(i)">Edit</button> &nbsp;&nbsp;
+                  <button type="button" class="btn btn7 btn-warning"  (click)="DeleteBill(i)">Delete</button> 
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </form>
+  </div>

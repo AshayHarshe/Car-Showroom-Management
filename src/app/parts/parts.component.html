@@ -1,0 +1,284 @@
+
+<!-- <div class="container mb-3" style="margin-top: 5%;">
+    <div class="cardS">
+      <div class="card card1">
+        <div class="card-body">PARTS AVAILABILITY &nbsp;
+          <button type="button" class="btn btn11 btn-primary" (click)="openPartsModal(Partstemplate,'null')">Add More</button>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+    <!-- *************** Table No. 2 **************** -->
+  
+  
+    <!-- <div class="table1">
+      <table class="table table-striped text-center ">
+        <thead>
+          <tr>
+            <th scope="col">Sr.No</th>
+            <th scope="col">Car Name</th>
+            <th scope="col">Part Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <tr *ngFor="let part of PartsOfCar; let i = index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{part.name}}</td>
+            <td>{{part.Part}}</td>
+            <td>{{part.Price}}</td>
+            <td>
+              <button type="button" class="btn btn8 btn-warning"  (click)="openPartsModal(EditPartstemplate,i)">Edit</button> &nbsp;&nbsp;
+              <button type="button" class="btn btn7 btn-warning"  (click)="DeletePart(i)">Delete</button> 
+              <!-- <i class="fa fa-close" (click)="DeletePart(i)"></i> -->
+            <!-- </td>
+          </tr>
+        </tbody>
+      </table>
+    </div> --> 
+   
+  <!-- </div>  -->
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!-- ************************************************
+  ************* P A R T S Template Start  *****************
+  ***************************************************** -->
+  
+  
+  
+  
+  
+  <!-- <ng-template #Partstemplate>
+    <div class="modal-header  AddCarHead RTemp" style="margin-top: -50px;">
+      <h4 class="modal-title pull-left">PARTS AVAILABILITY</h4>
+      <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="partclose()">
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+      </button>
+    </div>
+    
+    <div class="modal-body RTemp">
+     
+      <div class="mb-3 mt-3">
+        <label for="text" class="form-label  mb-1"><i class='fa fa-car' style='font-size:15px'></i> &nbsp; Car Name :-</label>
+         <select class="form-select" id="sel" name="sellist"  [(ngModel)]="carname">
+          <option value="" disabled selected>Select Car</option>
+          <option value="WR-V">WR-V</option>
+          <option value="Jazz">Jazz</option>
+          <option value="Amaze">Amaze</option>
+          <option value="Accord">Accord</option>
+          <option value="Honda City">Honda City</option>       
+        </select>
+      </div>
+  
+      <div class="mb-3 mt-3">
+        <label for="text" class="form-label  mb-1"><i class='fas fa-car-side' style='font-size:15px'></i> &nbsp; Part Name :-</label>
+         <select class="form-select" id="sel" name="sellist"   [(ngModel)]="carPart">
+          <option value="" disabled selected>Select Part</option>
+          <option value="Tyre">Tyre</option>
+          <option value="Battery">Battery</option>
+          <option value="Radiator">Radiator</option>
+          <option value="Breakes">Breakes</option>      
+          <option value="Head Light">Head Light</option>
+          <option value="Susspension">Susspension</option>
+          <option value="Wind Screen">Wind Screen</option>
+        </select>
+      </div>
+  
+      <div class="mb-3 mt-3">
+        <label for="text" class="form-label" ><i class="fas fa-rupee-sign" style="font-size:15px"></i> &nbsp; Price of Product :-</label>
+        <input type="number" class="form-control" placeholder="Enter amount"   [(ngModel)]="carPrice">
+      </div>
+  
+      
+      <button type="button" class="btn btn4 btn-outline-danger"   (click)="resePart()">Reset</button>&nbsp;
+      <button type="button" class="btn btn3 btn-outline-success"  [disabled]="carname == '' "  (click)="submitPart()">Add</button> 
+  
+    </div>
+  </ng-template> -->
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!-- ************************************************
+  ************* PARTS Edit Template Start  *****************
+  ***************************************************** -->
+  
+  
+  
+  
+  
+  <!-- <ng-template #EditPartstemplate>
+    <div class="modal-header  AddCarHead RTemp">
+      <h4 class="modal-title pull-left">CHANGE OF PART</h4>
+      <button type="button" class="btn-close close pull-right" aria-label="Close"  (click)="partclose()">
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+      </button>
+    </div>
+    
+    <div class="modal-body RTemp">
+     
+      <div class="mb-3 mt-3">
+        <label for="text" class="form-label  mb-1"><i class='fa fa-car' style='font-size:15px'></i> &nbsp; Car Name :-</label>
+         <select class="form-select" id="sel" name="sellist"  [(ngModel)]="carname">
+          <option value="" disabled selected>Select Car</option>
+          <option value="WR-V">WR-V</option>
+          <option value="Jazz">Jazz</option>
+          <option value="Amaze">Amaze</option>
+          <option value="Accord">Accord</option>
+          <option value="Honda City">Honda City</option>       
+        </select>
+      </div>
+  
+      <div class="mb-3 mt-3">
+        <label for="text" class="form-label  mb-1"><i class='fas fa-car-side' style='font-size:15px'></i> &nbsp; Part Name :-</label>
+         <select class="form-select" id="sel" name="sellist"   [(ngModel)]="carPart">
+          <option value="" disabled selected>Select Part</option>
+          <option value="Tyre">Tyre</option>
+          <option value="Battery">Battery</option>
+          <option value="Radiator">Radiator</option>
+          <option value="Breakes">Breakes</option>      
+          <option value="Head Light">Head Light</option>
+          <option value="Susspension">Susspension</option>
+          <option value="Wind Screen">Wind Screen</option>
+        </select>
+      </div>
+  
+      <div class="mb-3 mt-3">
+        <label for="text" class="form-label" ><i class="fas fa-rupee-sign" style="font-size:15px"></i> &nbsp; Price of Product :-</label>
+        <input type="number" class="form-control" placeholder="Enter amount"   [(ngModel)]="carPrice">
+      </div>
+  
+      <button type="button" class="btn btn4 btn-outline-danger"   (click)="resePart()">Reset</button> &nbsp;
+      <button type="button" class="btn btn3 btn-outline-success"  [disabled]="carname == '' "  (click)="editPart()">Update</button>
+      
+  
+    </div>
+  </ng-template> -->
+  
+  
+  
+  
+  
+  
+
+
+
+  <!-- new code reactive form -->
+
+  <div class="container mb-3 mt-5" >
+    <div class="cardS">
+      <div class="card card1">
+        <div class="card-body">PARTS AVAILABILITY &nbsp;
+          <!-- <button type="button" class="btn btn11 btn-primary" (click)="openPartsModal(Partstemplate,'null')">Add More</button> -->
+      </div>
+    </div>
+  </div>
+
+  <form [formGroup]="partsform">
+  <div class="container mt-5 mb-3">
+    <div class="row">
+      <div class="col-lg-4">
+
+        <div class="modal-body RTemp">     
+          <div class="mb-3 mt-3">
+            <label for="text" class="form-label  mb-1"><i class='fa fa-car' style='font-size:15px'></i> &nbsp; Car Name :-</label>
+             <select class="form-select" id="sel" name="sellist"  formControlName="name">
+              <option value="" disabled selected>Select Car</option>
+              <option value="WR-V">WR-V</option>
+              <option value="Jazz">Jazz</option>
+              <option value="Amaze">Amaze</option>
+              <option value="Accord">Accord</option>
+              <option value="Honda City">Honda City</option>       
+            </select>
+          </div>
+      
+          <div class="mb-3 mt-3">
+            <label for="text" class="form-label  mb-1"><i class='fas fa-car-side' style='font-size:15px'></i> &nbsp; Part Name :-</label>
+             <select class="form-select" id="sel" name="sellist"   formControlName="Part">
+              <option value="" disabled selected>Select Part</option>
+              <option value="Tyre">Tyre</option>
+              <option value="Battery">Battery</option>
+              <option value="Radiator">Radiator</option>
+              <option value="Breakes">Breakes</option>      
+              <option value="Head Light">Head Light</option>
+              <option value="Susspension">Susspension</option>
+              <option value="Wind Screen">Wind Screen</option>
+            </select>
+          </div>
+      
+          <div class="mb-3 mt-3">
+            <label for="text" class="form-label" ><i class="fas fa-rupee-sign" style="font-size:15px"></i> &nbsp; Price of Product :-</label>
+            <input type="number" class="form-control" placeholder="Enter amount"   formControlName="Price">
+          </div>
+      
+          
+          <button type="button" class="btn btn4 btn-outline-danger"   (click)="resePart()">Reset</button>&nbsp;
+          <button type="button" class="btn btn3 btn-outline-success" *ngIf="isEditClicked==false" (click)="submitPart()">Add</button> 
+          <button type="button" class="btn btn3 btn-outline-success" *ngIf="isEditClicked==true" (click)="update()">Update</button> 
+      
+        </div>
+      </div>
+
+      <div class="col-lg-8">
+        <div class="table1">
+          <table class="table table-striped text-center ">
+            <thead>
+              <tr>
+                <th scope="col">Sr.No</th>
+                <th scope="col">Car Name</th>
+                <th scope="col">Part Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            
+            <tbody>
+              <tr *ngFor="let part of PartsOfCar; let i = index">
+                <th scope="row">{{i+1}}</th>
+                <td>{{part.name}}</td>
+                <td>{{part.Part}}</td>
+                <td>{{part.Price}}</td>
+                <td>
+                  <!-- <button type="button" class="btn btn8 btn-warning"  (click)="openPartsModal(EditPartstemplate,i)">Edit</button> &nbsp;&nbsp; -->
+                  <button type="button" class="btn btn8 btn-warning"  (click)="editPart(i)">Edit</button> &nbsp;&nbsp;
+                  <button type="button" class="btn btn7 btn-warning"  (click)="DeletePart(i)">Delete</button> 
+                  <!-- <i class="fa fa-close" (click)="DeletePart(i)"></i> -->
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+
+
+
+
+
+
+
+  
+

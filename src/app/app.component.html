@@ -1,0 +1,378 @@
+<!-- * * * * * * * * * * * * * * * * * * Navbar Start  * * * * * * * * * * * * * * * * * *  -->
+
+<nav class="navbar navbar-light fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="../assets/image/Cars7.png" style='font: size 5px; margin-left: 15px;' alt=""></a>
+    <h1 class="Mhead">CAR SHOWROOM MANAGEMENT</h1>
+    <button class="navbar-toggler navbtn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><i class="fa fa-car" style="font-size:25px"></i>&nbsp; SHOWROOM MANAGEMENT</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <form class=" navnext d-flex">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn5 btn-outline-success" type="submit">Search</button>
+          </form>
+
+          <li class="nav-item mt-5" style="cursor: pointer;" data-bs-dismiss="offcanvas" routerLink="cars">
+            <a class="nav-link active" aria-current="page" >
+              1. &nbsp; Model Name & Number
+              <br>
+              <img src="../assets/image/Cars.png" style="margin-left: 25px;" alt="">
+            </a>
+          </li>
+
+          <li class="nav-item mt-5" style="cursor: pointer;" data-bs-dismiss="offcanvas" routerLink="parts">
+            <a class="nav-link active" aria-current="page">
+              2. &nbsp; Parts Availability
+              <br>
+              <img src="../assets/image/CarParts.png" style="margin-top: 10px; margin-left: 25px;" alt="">
+            </a>
+          </li>
+          
+          <li class="nav-item mt-5" style="cursor: pointer;" data-bs-dismiss="offcanvas" routerLink="staff">
+            <a class="nav-link active" aria-current="page">
+              3. &nbsp; Staff Section
+              <br>
+              <img src="../assets/image/Staff.png" style="margin-left: 25px;" alt="">
+            </a>
+          </li>
+
+          <li class="nav-item mt-5" style="cursor: pointer;" data-bs-dismiss="offcanvas"  routerLink="cars"  routerLink="bill">
+            <a class="nav-link active" aria-current="page">
+              4. &nbsp; Billing Section
+              <br>
+              <img src="../assets/image/Bill.png" style="margin-top: 7px; margin-left: 25px;" alt="">
+            </a>
+          </li>
+
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+<!-- * * * * * * * * * * * * * * * * * * Navbar End  * * * * * * * * * * * * * * * * *  -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+
+
+<div class="Middle">
+  <div class="frontdisplay">
+
+  
+
+  <div class="formMain">
+
+ <div class="Data">
+
+ 
+  <!-- <form class="Data"> -->
+   <div class="FormData">
+
+    <div class="MainH">
+      <h2>Login Yourself</h2>
+    </div>
+    
+    <hr class="rounded">
+
+     <div class="mb-3 mt-4">
+       <label for="exampleInputEmail1" class="form-label"><i class='fas fa-user-alt' style='font-size:15px'></i> &nbsp; Username :-</label>
+       <input type="text" class="form-control" placeholder="Enter your email or mobile no." [(ngModel)]="loginmail">
+       <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+     <div class="mb-3 mt-4">
+       <label for="exampleInputPassword1" class="form-label"><i class="fa fa-lock" style="font-size:20px"></i> &nbsp; Password :-</label>
+       <input type="text" class="form-control" placeholder="Enter your password"  [(ngModel)]="loginpassword">
+     </div>
+    
+    <button type="button" class="btn btn2 btn-outline-warning" (click)="resetlogin()">Reset</button>
+    <button type="button" class="btn btn1 btn-outline-primary" (click)="login()">Login</button>
+    </div>
+  </div>
+   <!-- </form> -->
+  </div>
+  
+  
+
+
+   <!-- <div class="Regbtn">
+    <button type="button" class="btn btn2 btn-outline-warning">Sign-up</button>
+   </div> -->
+
+   <div class="textP">
+    <p>Click on <span  (click)="openModal(template,'null')">Sign-up</span> for new Registration.</p>
+  </div>
+  
+</div>
+
+
+
+
+
+
+    <!-- ************************************************
+    ************* Registration Template Start *****************
+    ***************************************************** -->
+
+
+
+
+
+<ng-template #template>
+  <div class="RTemp">
+  <div class="modal-header">
+    <h4 class="modal-title">NEW REGISTRATION</h4>
+    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="closeregistration()">
+      <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+  </div>
+
+  <div class="modal-body">
+    
+    <div class="mb-3 mt-2">
+      <label for="text" class="form-label" ><i class='fas fa-user-alt' style='font-size:15px'></i> &nbsp; Full Name :-</label>
+      <input type="text" class="form-control" placeholder="Enter your name" [(ngModel)]="clickfullname">
+    </div>
+
+
+    <div class="mb-3 mt-3">
+      <label for="text" class="form-label  mb-1"><i class='fas fa-chart-line' style='font-size:15px'></i> &nbsp; Age :-</label>
+       <select class="form-select" id="sel" name="sellist"  [(ngModel)]="age">
+        <option value="" disabled selected>Select age</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+        <option value="32">32</option>
+        <option value="33">33</option>
+        <option value="34">34</option>
+        <option value="35">35</option>
+        <option value="36">36</option>
+        <option value="37">37</option>
+        <option value="38">38</option>
+        <option value="39">39</option>
+        <option value="40">40</option>
+        <option value="41">41</option>
+        <option value="42">42</option>
+        <option value="43">43</option>
+        <option value="44">44</option>
+        <option value="45">45</option>
+        <option value="46">46</option>
+        <option value="47">47</option>
+        <option value="48">48</option>
+        <option value="49">49</option>
+        <option value="50">50</option>
+        <option value="51">51</option>
+        <option value="52">52</option>
+        <option value="53">53</option>
+        <option value="54">54</option>
+        <option value="55">55</option>
+        <option value="56">56</option>
+        <option value="57">57</option>
+        <option value="58">58</option>
+      </select>
+    </div>
+
+
+    <div class="mb-3 mt-3">
+      <label for="text" class="form-label" ><i class="fa fa-phone" style="font-size:15px"></i> &nbsp; Mobile No. :-</label>
+      <input type="number" class="form-control" placeholder="Enter number"  [(ngModel)]="mobNo">
+    </div>
+
+    <div class="mb-3 mt-3">
+      <label for="text" class="form-label" ><i class="fas fa-envelope-square" style="font-size:15px"></i> &nbsp; Email ID :-</label>
+      <input type="text" class="form-control" placeholder="Enter email" [(ngModel)]="emailID">
+    </div>
+
+    <div class="mb-3 mt-3">
+      <label for="text" class="form-label" ><i class="fas fa-map-marker-alt" style="font-size:15px"></i> &nbsp; Permanent Address :-</label>
+      <input type="text" class="form-control" placeholder="Enter your address" [(ngModel)]="pAddress">
+    </div>
+
+    <div class="form-check mb-1 RTempG">
+      <label class="form-check-label"><i class='fa fa-venus-mars' style='font-size:15px'></i> Gender :-</label><br>
+      <input type="radio"  id="Male" name="Gender" value="Male" [(ngModel)]="gender">
+      <label for="Gender" class="form-label">Male</label>&nbsp;&nbsp;&nbsp;
+      <input type="radio"  id="Female" name="Gender" value="Female" [(ngModel)]="gender">
+      <label for="Gender" class="form-label"> Female</label> 
+    </div>
+
+    
+    <button type="button" class="btn btn4 btn-outline-danger" (click)="resetregistration()">Reset</button>&nbsp;
+    <button type="button" class="btn btn3 btn-outline-success"  (click)="signup()">Sign-up</button> 
+
+   </div>
+ </div> 
+</ng-template>
+
+
+
+
+
+
+
+
+
+  <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+  <!-- * * * * * * * * * * * * * * * * * * Mid Data * * * * * * * * * * * * * * * * * *  -->
+  <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+
+
+
+
+
+
+
+
+  <div class="MidData">
+
+
+
+
+ <!--  * * * * * * * * * * * * * * * * * * * * * * * *   C A R  * * * * * * * * * * * * * * * * * * * * * * * *  -->
+    
+ <!--  * * * * * * * * * * * * * * * * * * * * * * * *   P A R T S  * * * * * * * * * * * * * * * * * * * * * * * *  -->
+
+ <!--  * * * * * * * * * * * * * * * * * * * * * * * *   S T A F F  * * * * * * * * * * * * * * * * * * * * * * * *  -->
+
+ <!--  * * * * * * * * * * * * * * * * * * * * * * * * B I L L * * * * * * * * * * * * * * * * * * * * * * * *  -->
+
+
+ <router-outlet></router-outlet>
+
+
+
+
+
+
+<!-- footer -->
+
+
+
+<div class="footer">
+
+
+  <div class="FLine">
+    <hr>
+  </div>
+
+  <div class="container-fluid">
+
+  
+  <div class="row">
+    <div class="col-lg-4">
+      <img src="../assets/image/MainLogo.png" alt="logo" >
+        CAR'S WORLD
+     <div class="socialimg">
+       <i class="fa fa-facebook-f" style="font-size:36px; color: white;"></i>&nbsp;&nbsp;
+       <i class="fa fa-twitter" style="font-size:36px; color: white;"></i>&nbsp;&nbsp;
+       <i class="fa fa-instagram" style="font-size:36px; color: white;"></i>&nbsp;&nbsp;
+       <i class="fa fa-whatsapp" style="font-size:36px; color: white;"></i>
+     </div>
+      
+    </div>
+
+    <div class="col-lg-2">
+      <h4>Services</h4>
+      <ul style="list-style-type:none;" >
+        <div class="Servicesdata1">
+          <li>Scheduled Services</li>
+          <li>Denting & Painting</li>
+          <li>AC Services</li>
+          <li>Tyres</li>
+          <li>Lights</li>
+          <li>Batteries</li>
+          <li>Insurance</li>
+          <li>Detaling</li>
+          <li>Custom Repair</li>
+          <li>Windshields & Glass</li>
+          <li>Cleaning & Washing</li>
+        </div>
+      </ul> 
+    </div>
+
+    <div class="col-lg-2">
+      <h4>Luxary Brands</h4>
+      <ul style="list-style-type:none;">
+        <div class="Servicesdata2">
+          <li>Mercedes</li>
+          <li>BMW</li>
+          <li>Audi</li>
+          <li>Volvo</li>
+          <li>Ferrari</li>
+          <li>Jaguar</li>
+          <li>Porsche</li>
+          <li>Mustang</li>
+          <li>Mitsubishi</li>
+          <li>Land Rover</li>
+          <li>Rolls Royce</li>
+        </div>
+      </ul> 
+    </div>
+
+    <div class="col-lg-2">
+      <h4>Popular Brands</h4>
+      <ul style="list-style-type:none;">
+        <div class="Servicesdata1">
+          <li>Maruti Suzuki</li>
+          <li>Hyundai</li>
+          <li>Honda</li>
+          <li>Toyota</li>
+          <li>Tata</li>
+          <li>kia</li>
+          <li>Fiat</li>
+          <li>Skoda</li>
+          <li>Renault</li>
+          <li>Mahindra</li>
+          <li>Chevrolet</li>
+        </div>
+      </ul> 
+    </div>
+
+    <div class="col-lg-2">
+      <h4>About Us</h4>
+      <ul style="list-style-type:none;">
+        <div class="Servicesdata1">
+          <li>Contact Us</li>
+          <li>Careers</li>
+          <li>FAQs</li>
+          <li>Privacy</li>
+          <li>Partners</li>
+          <li>Workshops</li>
+          <li>Offers</li>
+          <li>Reviews</li>
+          <li>Directory</li>
+          <li>Feedback</li>
+          <li>Terms & Condition</li>
+        </div>
+      </ul> 
+    </div>
+
+  </div>
+  <div class="copyright">
+    <div class="ctext">
+      <h6>© 2022 Car-Showroom. All rights reserved.</h6>
+    </div>
+  </div>
+</div>
+
+</div>

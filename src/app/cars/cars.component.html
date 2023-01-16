@@ -1,0 +1,280 @@
+
+ <!-- <div class="container mb-3">
+    <div class="card111">
+    <div class="cardS">
+      <div class="card card1">
+        <div class="card-body">DETAILS OF CARS &nbsp;
+          <button type="button" class="btn btn11 btn-primary"  (click)="openModalWithComponentCarDetails(templateCarDetails,'null')">Add More</button>
+      </div>
+    </div>
+</div>
+</div> -->
+    
+
+
+<!-- *************** Table No. 1 **************** -->
+
+<!-- <div class="table11">
+<div class="table1">
+  <table class="table table-striped text-center ">
+    <thead>
+      <tr>
+        <th scope="col">Sr.No</th>
+        <th scope="col">Car Name</th>
+        <th scope="col">Car Varient</th>
+        <th scope="col">Fuel Type</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <tr *ngFor="let Car of DetailsOfCar; let i = index">
+        <th scope="row">{{i + 1}}</th>
+        <td>{{Car.Name}}</td>
+        <td>{{Car.Varient}}</td>
+        <td>{{Car.Fuel}}</td>
+        <td>
+          <button type="button" class="btn btn8  btn-warning" (click)="openModalWithComponentCarDetails(EdittemplateCarDetails,i)">Edit</button> &nbsp;&nbsp;
+          <button type="button" class="btn btn7  btn-warning" (click)="DeleteCar(i)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ************************************************
+************* Cars Details Template Start 1 *****************
+***************************************************** -->
+
+
+
+
+
+<!-- <ng-template #templateCarDetails>
+<div class="modal-header AddCarHead RTemp">
+  <h4 class="modal-title">NEW CAR DETAILS</h4>
+  <button type="button" class="btn-close close pull-right" aria-label="Close"  (click)="Carclose()">
+    <span aria-hidden="true" class="visually-hidden">&times;</span>
+  </button>
+</div>
+
+<div class="modal-body RTemp">
+     <div class="mb-3 mt-3">
+    <label for="text" class="form-label  mb-1"><i class='fa fa-car' style='font-size:15px'></i> &nbsp; Car Name :-</label>
+     <select class="form-select" id="sel" name="sellist"  [(ngModel)]="CarName">
+      <option value="" disabled selected>Select Car</option>
+      <option value="WR-V">WR-V</option>
+      <option value="Jazz">Jazz</option>
+      <option value="Amaze">Amaze</option>
+      <option value="Accord">Accord</option>
+      <option value="Honda City">Honda City</option>       
+    </select>
+  </div>
+
+  <div class="mb-3 mt-3">
+    <label for="text" class="form-label  mb-1"><i class='fas fa-car-side' style='font-size:15px'></i> &nbsp; Car Varient :-</label>
+     <select class="form-select" id="sel" name="sellist"  [(ngModel)]="CarVarient">
+      <option value="" disabled selected>Choose Varient</option>
+      <option value="Base Varient">Base Varient</option>
+      <option value="Moderate Varient">Moderate Varient</option>
+      <option value="Top Varient">Top Varient</option>       
+    </select>
+  </div>
+
+  <div class="mb-3 mt-3">
+    <label for="text" class="form-label  mb-1"><i class='fas fa-gas-pump' style='font-size:15px'></i> &nbsp; Fuel Type :-</label>
+     <select class="form-select" id="sel" name="sellist"  [(ngModel)]="CarFuel">
+      <option value="" disabled selected>Choose type</option>
+      <option value="Petrol">Petrol</option>
+      <option value="Diesel">Diesel</option>
+      <option value="Hybrid">Hybrid</option>
+    </select>
+  </div>
+
+  <button type="button" class="btn btn4 btn-outline-danger"  (click)="resetCar()">Reset</button> &nbsp;
+  <button type="button" class="btn btn3 btn-outline-success"  [disabled]="CarName == '' "  (click)="submitCars()">Add</button>
+ 
+
+</div>
+</ng-template> -->
+
+
+
+
+
+
+
+<!-- ************************************************
+************* Edit Cars Details Template Start 1 *****************
+***************************************************** -->
+
+
+
+
+
+<!-- <ng-template #EdittemplateCarDetails>
+<div class="modal-header AddCarHead RTemp">
+  <h4 class="modal-title">EDIT CAR DETAILS</h4>
+  <button type="button" class="btn-close close pull-right" aria-label="Close"  (click)="Carclose()">
+    <span aria-hidden="true" class="visually-hidden">&times;</span>
+  </button>
+</div>
+
+<div class="modal-body RTemp">
+     <div class="mb-3 mt-3">
+    <label for="text" class="form-label  mb-1"><i class='fa fa-car' style='font-size:15px'></i> &nbsp; Car Name :-</label>
+     <select class="form-select" id="sel" name="sellist"  [(ngModel)]="CarName">
+      <option value="" disabled selected>Select Car</option>
+      <option value="WR-V">WR-V</option>
+      <option value="Jazz">Jazz</option>
+      <option value="Amaze">Amaze</option>
+      <option value="Accord">Accord</option>
+      <option value="Honda City">Honda City</option>       
+    </select>
+  </div>
+
+  <div class="mb-3 mt-3">
+    <label for="text" class="form-label  mb-1"><i class='fas fa-car-side' style='font-size:15px'></i> &nbsp; Car Varient :-</label>
+     <select class="form-select" id="sel" name="sellist"  [(ngModel)]="CarVarient">
+      <option value="" disabled selected>Choose Varient</option>
+      <option value="Base Varient">Base Varient</option>
+      <option value="Moderate Varient">Moderate Varient</option>
+      <option value="Top Varient">Top Varient</option>       
+    </select>
+  </div>
+
+  <div class="mb-3 mt-3">
+    <label for="text" class="form-label  mb-1"><i class='fas fa-gas-pump' style='font-size:15px'></i> &nbsp; Fuel Type :-</label>
+     <select class="form-select" id="sel" name="sellist"  [(ngModel)]="CarFuel">
+      <option value="" disabled selected>Choose type</option>
+      <option value="Petrol">Petrol</option>
+      <option value="Diesel">Diesel</option>
+      <option value="Hybrid">Hybrid</option>
+    </select>
+  </div>
+
+  <button type="button" class="btn btn4 btn-outline-danger"  (click)="resetCar()">Reset</button> &nbsp;
+  <button type="button" class="btn btn3 btn-outline-success"  [disabled]="CarName == '' "  (click)="editCarDetails()">Update</button>
+  
+
+</div>
+</ng-template> -->
+
+
+
+
+
+
+
+
+
+
+<!-- new code reactive form -->
+
+
+<div class="container mt-5 mb-3">
+  <div class="card111">
+    <div class="cardS">
+      <div class="card card1">
+        <div class="card-body">DETAILS OF CARS &nbsp;
+          <!-- <button type="button" class="btn btn11 btn-primary"  (click)="openModalWithComponentCarDetails(templateCarDetails,'null')">Add More</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<form [formGroup]="carsform">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4">
+      
+      <div class="modal-body RTemp">
+           <div class="mb-3 mt-3">
+          <label for="text" class="form-label  mb-1"><i class='fa fa-car' style='font-size:15px'></i> &nbsp; Car Name :-</label>
+           <select class="form-select" id="sel" name="sellist"  formControlName="Name">
+            <option value="" disabled selected>Select Car</option>
+            <option value="WR-V">WR-V</option>
+            <option value="Jazz">Jazz</option>
+            <option value="Amaze">Amaze</option>
+            <option value="Accord">Accord</option>
+            <option value="Honda City">Honda City</option>       
+          </select>
+        </div>
+      
+        <div class="mb-3 mt-3">
+          <label for="text" class="form-label  mb-1"><i class='fas fa-car-side' style='font-size:15px'></i> &nbsp; Car Varient :-</label>
+           <select class="form-select" id="sel" name="sellist" formControlName="Varient">
+            <option value="" disabled selected>Choose Varient</option>
+            <option value="Base Varient">Base Varient</option>
+            <option value="Moderate Varient">Moderate Varient</option>
+            <option value="Top Varient">Top Varient</option>       
+          </select>
+        </div>
+      
+        <div class="mb-3 mt-3">
+          <label for="text" class="form-label  mb-1"><i class='fas fa-gas-pump' style='font-size:15px'></i> &nbsp; Fuel Type :-</label>
+           <select class="form-select" id="sel" name="sellist" formControlName="Fuel">
+            <option value="" disabled selected>Choose type</option>
+            <option value="Petrol">Petrol</option>
+            <option value="Diesel">Diesel</option>
+            <option value="Hybrid">Hybrid</option>
+          </select>
+        </div>
+      
+        <button type="button" class="btn btn4 btn-outline-danger"  (click)="resetCar()">Reset</button>
+        <button type="button" class="btn btn3 btn-outline-success" *ngIf="isEditClicked==false" (click)="submitCars()">Add</button>
+        <button type="button" class="btn btn3 btn-outline-success" *ngIf="isEditClicked==true" (click)="update()">Update</button>
+       
+      
+      </div>
+    </div>
+
+    <div class="col-lg-8">
+      <div class="table11">
+        <div class="table1">
+          <table class="table table-striped text-center ">
+            <thead>
+              <tr>
+                <th scope="col">Sr.No</th>
+                <th scope="col">Car Name</th>
+                <th scope="col">Car Varient</th>
+                <th scope="col">Fuel Type</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            
+            <tbody>
+              <tr *ngFor="let Car of DetailsOfCar; let i = index">
+                <th scope="row">{{i + 1}}</th>
+                <td>{{Car.Name}}</td>
+                <td>{{Car.Varient}}</td>
+                <td>{{Car.Fuel}}</td>
+                <td>
+                  <!-- <button type="button" class="btn btn8  btn-warning" (click)="openModalWithComponentCarDetails(EdittemplateCarDetails,i)">Edit</button> &nbsp;&nbsp; -->
+                  <button type="button" class="btn btn8  btn-warning" (click)="editCarDetails(i)">Edit</button> &nbsp;&nbsp;
+                  <button type="button" class="btn btn7  btn-warning" (click)="DeleteCar(i)">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        </div>
+    </div>
+  </div>
+</div>
+</form>

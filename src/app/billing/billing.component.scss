@@ -1,0 +1,420 @@
+
+
+
+
+// * * * * * * * * * * * * * * * * * *  Navbar Start  * * * * * * * * * * * * * * * * * * 
+
+
+.Mhead
+{
+    font-weight: 800;
+    color: rgb(207, 50, 50);
+}
+
+.navbar
+{
+    background-color: black;
+    // opacity: 0.9;
+    box-shadow: 0 4px 8px 0 rgba(254, 254, 254, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    // rgb(198, 222, 243)
+}
+
+.navbar-toggler{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navbtn
+{
+    color: white;
+    background-color: white;
+    margin-right: 15px;
+}
+
+.btn-close
+{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+
+.offcanvas-title
+{
+    font-weight: 800;
+    font-size: 21px;
+    margin-left: -5px;
+    color: rgb(118, 7, 7);
+}
+
+.nav-item
+{
+    font-weight: 700;
+    margin-left: 20px;
+}
+
+.navnext .form-control
+{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navnext .btn1
+{
+    margin-left: 40px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+
+
+
+
+// * * * * * * * * * * * * * * * * * *  Navbar End  * * * * * * * * * * * * * * * * * * 
+
+
+// .frontdisplay
+// {
+//     height: 100vh;
+//     width: 100%;
+//     background-image: url('../assets/image/MainBG.jpg');
+//     background-position: center;
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     padding-top: 120px;
+//     margin-top: 5%;
+// }
+
+
+
+// .Middle
+// {
+//     min-height: 100vh;
+//     width: 100%;
+//     background-image: url(../assets/image/MidBG1.jpg);
+//     background-color: linear-gradient((0, 0, 0, 0.8) (0, 0, 0, 0.8)) ;
+//     background-color: black;
+//     background-position: center;
+//     background-size: cover;
+//     position: absolute;
+//     box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+// }
+
+/* Rounded border */
+hr.rounded {
+    border-top: 3px solid rgb(118, 113, 113);
+    border-radius: 5px;
+    margin-left: -8%;
+  }
+
+
+.Data
+{
+    width: 40%;
+    margin-bottom: 4%;
+    margin-left: 60px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(253, 251, 251, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+}
+
+.FormData .MainH
+{
+    margin-left: 25%;
+}
+
+.FormData
+{
+    margin-left: 50px;
+}
+
+.FormData .form-control
+{
+    width: 85%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.FormData .form-label
+{
+    margin-left: 30px;
+    font-weight: 700;
+}
+
+.FormData .form-text
+{
+    margin-left: 13px;
+}
+
+.FormData .btn1
+{
+    padding: 10px 35px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.FormData .btn2
+{
+    padding: 10px 30px;
+    margin-left: 40%;
+    // margin-top: 15px;
+    font-weight: 600;
+    margin-top: -3px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.textP
+{
+    color: rgb(249, 249, 132);
+    font-weight: 500;
+    font-size: 17px;
+    margin-left: 12%;
+    margin-top: 40px;
+    
+}
+
+.textP span
+{
+    color: white;
+    cursor: pointer;
+    // text-decoration: underline;
+}
+
+.btn5
+{
+    margin-left: 7px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+}
+
+
+
+
+
+
+// * * * * * * * * * * * * * * * * * *  Registration Template * * * * * * * * * * * * * * * * * * 
+
+
+
+
+.RTemp .modal-title
+{
+    margin-left: 15%;
+    font-weight: 800;
+    font-size: 30px;
+    color: rgb(131, 63, 63);
+}
+
+.RTemp .form-control
+{
+    width: 90%;
+    margin-left: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.RTemp .form-select
+{
+    width: 90%;
+    margin-left: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.RTemp .form-label
+{
+    margin-left: 25px;
+    font-weight: 700;
+}
+
+.RTemp .RTempG 
+{
+    margin-left: 25px;
+}
+
+.RTemp .RTempG .form-label
+{
+    margin-left: 15px;
+}
+
+.RTemp .RTempG .form-check-label
+{
+    font-weight: 700;
+}
+
+.btn3
+{
+    font-weight: 700;
+    width: 30%;
+    height: 40px;
+    margin-top: 6%;
+    margin-bottom: 5%;
+    margin-left: 1px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btn4
+{
+    width: 30%;
+    height: 40px;
+    font-weight: 700;
+    margin-top: 23px;
+    margin-bottom: 5%;
+    margin-left: 3%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+
+
+
+// * * * * * * * * * * * * * * * * * *  Mid Data * * * * * * * * * * * * * * * * * * 
+
+
+
+
+
+
+.MidData
+{
+    margin-top: 15%;
+}
+
+.card111
+{
+    margin-top: -7%;
+}
+
+.cardS .card
+{
+    margin-top: -7%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cardS .card-body
+{
+    font-weight: 800;
+    font-size: 25px;
+    margin-left: 5px;
+    color: rgb(118, 7, 7);
+}
+
+.btn11
+{
+    float: right;
+    color: white;
+    background-color: rgb(118, 7, 7);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.table
+{
+    background-color: white;
+    margin-top: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.table1
+{
+    margin-top: 7%;
+    margin-right: 3%;
+}
+
+.btn7
+{
+    font-weight: 700;
+    color: rgb(118, 7, 7);
+    background-color: white;
+    border-color: rgb(118, 7, 7);
+    padding: 5px 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btn8
+{
+    font-weight: 700;
+    color: green;
+    background-color: white;
+    border-color: rgb(118, 7, 7);
+    padding: 5px 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.fa-close
+{
+    color: rgb(118, 7, 7);
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+
+// footer
+
+.footer
+{
+    background-color: black;
+}
+
+.FLine
+{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    height: 2px;
+    border-width: 0;
+    color: black;
+    background-color: black;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+}
+
+.footer .col-lg-4
+{
+    color: rgb(207, 50, 50);
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.footer .col-lg-4 .socialimg
+{
+    margin-top: 5px;
+    margin-left: 90px;
+
+}
+
+.footer .col-lg-2 h4
+{
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.footer .col-lg-2 li
+{
+    color: rgb(153, 150, 150);
+    font-weight: 400;
+}
+
+.footer .Servicesdata1
+{
+    margin-left: -29px; 
+}
+
+.footer .Servicesdata2
+{
+    margin-left: -29px;
+}
+
+.footer .copyright
+{
+    height: 50px;
+    color: rgb(144, 48, 48);
+    background-color: rgb(27, 25, 25);
+    margin-left: 0;
+    margin-top: 3%;
+    margin-bottom: 0%;
+}
+
+.footer .copyright .ctext
+{
+    margin-left: 34%;
+    padding-top: 18px;
+    margin-bottom: 20px;
+    color: rgb(97, 126, 97);
+}

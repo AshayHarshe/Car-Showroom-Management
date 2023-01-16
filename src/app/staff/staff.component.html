@@ -1,0 +1,403 @@
+
+
+
+
+ <!-- <div class="container mb-3" style="margin-top: 5%;">
+    <div class="cardS">
+      <div class="card card1">
+        <div class="card-body">SHOWROOM STAFF &nbsp;
+          <button type="button" class="btn btn11 btn-primary" (click)="openStaffModal(Stafftemplate,'null')">Add More</button>
+      </div>
+    </div>
+  </div> -->
+  
+  
+  
+    <!-- *************** Table No. 3 **************** -->
+  
+  
+    <!-- <div class="table1">
+      <table class="table table-striped text-center ">
+        <thead>
+          <tr>
+            <th scope="col">Sr.No</th>
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Mobile No.</th>
+            <th scope="col">Designation</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <tr *ngFor="let staff of StaffOfCar; let i = index">
+            <th scope="row">{{i + 1}}</th>
+            <td>{{staff.name}}</td>
+            <td>{{staff.age}}</td>
+            <td>{{staff.mobile}}</td>
+            <td>{{staff.designation}}</td>
+            <td>
+              <button type="button" class="btn btn8 btn-warning"  (click)="openStaffModal(EditStafftemplate,i)">Edit</button> &nbsp;&nbsp;
+              <button type="button" class="btn btn7 btn-warning"  (click)="DeleteStaff(i)">Delete</button> 
+              
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div> -->
+   
+  <!-- </div> -->
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!-- ************************************************
+  ************* S T A F F Template Start  *****************
+  ***************************************************** -->
+  
+  
+  
+  
+  
+  
+  
+  <!-- <ng-template #Stafftemplate>
+    <div class="modal-header  AddCarHead RTemp">
+      <h4 class="modal-title pull-left ">SHOWROOM STAFF</h4>
+      <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="staffclose()">
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body RTemp">
+      
+      <div class="mb-3 mt-2">
+        <label for="text" class="form-label" ><i class='fas fa-user-alt' style='font-size:15px'></i> &nbsp; Full Name :-</label>
+        <input type="text" class="form-control" placeholder="Enter your name"   [(ngModel)]="staffName">
+      </div>
+  
+  
+      <div class="mb-3 mt-3">
+        <label for="text" class="form-label  mb-1"><i class='fas fa-chart-line' style='font-size:15px'></i> &nbsp; Age :-</label>
+         <select class="form-select" id="sel" name="sellist" [(ngModel)]="staffAge">
+          <option value="" disabled selected>Select age</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+          <option value="26">26</option>
+          <option value="27">27</option>
+          <option value="28">28</option>
+          <option value="29">29</option>
+          <option value="30">30</option>
+          <option value="31">31</option>
+          <option value="32">32</option>
+          <option value="33">33</option>
+          <option value="34">34</option>
+          <option value="35">35</option>
+          <option value="36">36</option>
+          <option value="37">37</option>
+          <option value="38">38</option>
+          <option value="39">39</option>
+          <option value="40">40</option>
+          <option value="41">41</option>
+          <option value="42">42</option>
+          <option value="43">43</option>
+          <option value="44">44</option>
+          <option value="45">45</option>
+          <option value="46">46</option>
+          <option value="47">47</option>
+          <option value="48">48</option>
+          <option value="49">49</option>
+          <option value="50">50</option>
+          <option value="51">51</option>
+          <option value="52">52</option>
+          <option value="53">53</option>
+          <option value="54">54</option>
+          <option value="55">55</option>
+          <option value="56">56</option>
+          <option value="57">57</option>
+          <option value="58">58</option>
+        </select>
+      </div>
+  
+  
+      <div class="mb-3 mt-3">
+        <label for="text" class="form-label" ><i class="fa fa-phone" style="font-size:15px"></i> &nbsp; Mobile No. :-</label>
+        <input type="number" class="form-control" placeholder="Enter number" [(ngModel)]="staffMobile">
+      </div>
+  
+      <div class="mb-3 mt-3">
+        <label for="text" class="form-label  mb-1"><i class='fas fa-address-book' style='font-size:15px'></i> &nbsp; Designation :-</label>
+         <select class="form-select" id="sel" name="sellist"  [(ngModel)]="staffDesignation">
+          <option value="" disabled selected>Choose Post</option>
+          <option value="Receptionist">Receptionist</option>
+          <option value="Accountant">Accountant</option>
+          <option value="Sales Executive">Sales Executive</option>
+          <option value="Security">Security</option>
+          <option value="Mechanic">Mechanic</option>
+          <option value="Electrician">Electrician</option>
+          <option value="Cleaning Staff">Cleaning Staff</option>
+        </select>
+      </div>
+  
+      <button type="button" class="btn btn4 btn-outline-danger"   (click)="resetStaff()">Reset</button> &nbsp;
+      <button type="button" class="btn btn3 btn-outline-success"  [disabled]="staffName == '' "    (click)="submitStafft()">Add</button>
+      
+  
+    </div>
+  </ng-template> -->
+  
+  
+  
+  
+  
+  
+  
+  <!-- ************************************************
+  ************* STAFF Edit Template Start  *****************
+  ***************************************************** -->
+  
+  
+  
+  
+  
+  
+  <!-- <ng-template #EditStafftemplate>
+    <div class="modal-header  AddCarHead RTemp">
+      <h4 class="modal-title pull-left ">SHOWROOM STAFF</h4>
+      <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="staffclose()">
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body RTemp">
+      
+      <div class="mb-3 mt-2">
+        <label for="text" class="form-label" ><i class='fas fa-user-alt' style='font-size:15px'></i> &nbsp; Full Name :-</label>
+        <input type="text" class="form-control" placeholder="Enter your name"   [(ngModel)]="staffName">
+      </div>
+  
+  
+      <div class="mb-3 mt-3">
+        <label for="text" class="form-label  mb-1"><i class='fas fa-chart-line' style='font-size:15px'></i> &nbsp; Age :-</label>
+         <select class="form-select" id="sel" name="sellist" [(ngModel)]="staffAge">
+          <option value="" disabled selected>Select age</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+          <option value="26">26</option>
+          <option value="27">27</option>
+          <option value="28">28</option>
+          <option value="29">29</option>
+          <option value="30">30</option>
+          <option value="31">31</option>
+          <option value="32">32</option>
+          <option value="33">33</option>
+          <option value="34">34</option>
+          <option value="35">35</option>
+          <option value="36">36</option>
+          <option value="37">37</option>
+          <option value="38">38</option>
+          <option value="39">39</option>
+          <option value="40">40</option>
+          <option value="41">41</option>
+          <option value="42">42</option>
+          <option value="43">43</option>
+          <option value="44">44</option>
+          <option value="45">45</option>
+          <option value="46">46</option>
+          <option value="47">47</option>
+          <option value="48">48</option>
+          <option value="49">49</option>
+          <option value="50">50</option>
+          <option value="51">51</option>
+          <option value="52">52</option>
+          <option value="53">53</option>
+          <option value="54">54</option>
+          <option value="55">55</option>
+          <option value="56">56</option>
+          <option value="57">57</option>
+          <option value="58">58</option>
+        </select>
+      </div>
+  
+  
+      <div class="mb-3 mt-3">
+        <label for="text" class="form-label" ><i class="fa fa-phone" style="font-size:15px"></i> &nbsp; Mobile No. :-</label>
+        <input type="number" class="form-control" placeholder="Enter number" [(ngModel)]="staffMobile">
+      </div>
+  
+      <div class="mb-3 mt-3">
+        <label for="text" class="form-label  mb-1"><i class='fas fa-address-book' style='font-size:15px'></i> &nbsp; Designation :-</label>
+         <select class="form-select" id="sel" name="sellist"  [(ngModel)]="staffDesignation">
+          <option value="" disabled selected>Choose Post</option>
+          <option value="Receptionist">Receptionist</option>
+          <option value="Accountant">Accountant</option>
+          <option value="Sales Executive">Sales Executive</option>
+          <option value="Security">Security</option>
+          <option value="Mechanic">Mechanic</option>
+          <option value="Electrician">Electrician</option>
+          <option value="Cleaning Staff">Cleaning Staff</option>
+        </select>
+      </div>
+  
+      <button type="button" class="btn btn4 btn-outline-danger"   (click)="resetStaff()">Reset</button> &nbsp;
+      <button type="button" class="btn btn3 btn-outline-success"  [disabled]="staffName == '' "   (click)="editStaff()">Update</button>
+      
+  
+    </div>
+  </ng-template> -->
+  
+  
+  
+  
+  
+  <!-- new code reactive form -->
+
+  <div class="container mb-3" style="margin-top: 5%;">
+    <div class="cardS">
+      <div class="card card1">
+        <div class="card-body">SHOWROOM STAFF &nbsp;
+          <!-- <button type="button" class="btn btn11 btn-primary" (click)="openStaffModal(Stafftemplate,'null')">Add More</button> -->
+      </div>
+    </div>
+  </div>
+  
+  <form [formGroup]="staffform">
+  <div class="container">
+    <div class="row" style="margin-top: 5%;">
+      <div class="col-lg-4">
+        <div class="modal-body RTemp">
+      
+          <div class="mb-3 mt-2">
+            <label for="text" class="form-label" ><i class='fas fa-user-alt' style='font-size:15px'></i> &nbsp; Full Name :-</label>
+            <input type="text" class="form-control" placeholder="Enter your name"   formControlName="name">
+          </div>
+      
+      
+          <div class="mb-3 mt-3">
+            <label for="text" class="form-label  mb-1"><i class='fas fa-chart-line' style='font-size:15px'></i> &nbsp; Age :-</label>
+             <select class="form-select" id="sel" name="sellist" formControlName="age">
+              <option value="" disabled selected>Select age</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+              <option value="32">32</option>
+              <option value="33">33</option>
+              <option value="34">34</option>
+              <option value="35">35</option>
+              <option value="36">36</option>
+              <option value="37">37</option>
+              <option value="38">38</option>
+              <option value="39">39</option>
+              <option value="40">40</option>
+              <option value="41">41</option>
+              <option value="42">42</option>
+              <option value="43">43</option>
+              <option value="44">44</option>
+              <option value="45">45</option>
+              <option value="46">46</option>
+              <option value="47">47</option>
+              <option value="48">48</option>
+              <option value="49">49</option>
+              <option value="50">50</option>
+              <option value="51">51</option>
+              <option value="52">52</option>
+              <option value="53">53</option>
+              <option value="54">54</option>
+              <option value="55">55</option>
+              <option value="56">56</option>
+              <option value="57">57</option>
+              <option value="58">58</option>
+            </select>
+          </div>
+      
+      
+          <div class="mb-3 mt-3">
+            <label for="text" class="form-label" ><i class="fa fa-phone" style="font-size:15px"></i> &nbsp; Mobile No. :-</label>
+            <input type="number" class="form-control" placeholder="Enter number" formControlName="mobile">
+          </div>
+      
+          <div class="mb-3 mt-3">
+            <label for="text" class="form-label  mb-1"><i class='fas fa-address-book' style='font-size:15px'></i> &nbsp; Designation :-</label>
+             <select class="form-select" id="sel" name="sellist"  formControlName="designation">
+              <option value="" disabled selected>Choose Post</option>
+              <option value="Receptionist">Receptionist</option>
+              <option value="Accountant">Accountant</option>
+              <option value="Sales Executive">Sales Executive</option>
+              <option value="Security">Security</option>
+              <option value="Mechanic">Mechanic</option>
+              <option value="Electrician">Electrician</option>
+              <option value="Cleaning Staff">Cleaning Staff</option>
+            </select>
+          </div>
+      
+          <button type="button" class="btn btn4 btn-outline-danger"   (click)="resetStaff()">Reset</button> &nbsp;
+          <button type="button" class="btn btn3 btn-outline-success" *ngIf="isEditClicked==false" (click)="submitStafft()">Add</button>
+          <button type="button" class="btn btn3 btn-outline-success" *ngIf="isEditClicked==true" (click)="update()">Update</button>
+          
+      
+        </div>
+      </div>
+
+      <div class="col-lg-8">
+        <div class="table1">
+          <table class="table table-striped text-center ">
+            <thead>
+              <tr>
+                <th scope="col">Sr.No</th>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">Mobile No.</th>
+                <th scope="col">Designation</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            
+            <tbody>
+              <tr *ngFor="let staff of StaffOfCar; let i = index">
+                <th scope="row">{{i + 1}}</th>
+                <td>{{staff.name | titlecase}}</td>
+                <td>{{staff.age}}</td>
+                <td>{{staff.mobile}}</td>
+                <td>{{staff.designation}}</td>
+                <td>
+                  <!-- <button type="button" class="btn btn8 btn-warning"  (click)="openStaffModal(EditStafftemplate,i)">Edit</button> &nbsp;&nbsp; -->
+                  <button type="button" class="btn btn8 btn-warning"  (click)="editStaff(i)">Edit</button> &nbsp;&nbsp;
+                  <button type="button" class="btn btn7 btn-warning"  (click)="DeleteStaff(i)">Delete</button> 
+                  
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
